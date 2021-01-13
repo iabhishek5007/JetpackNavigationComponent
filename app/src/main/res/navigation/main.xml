@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.rckdeveloper.jetpacknavigationcomponent.MainFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_transactionFragment"
+            app:destination="@id/transactionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_recipientFragment"
+            app:destination="@id/recipientFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewBalanceFragment"
+            app:destination="@id/viewBalanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.rckdeveloper.jetpacknavigationcomponent.TransactionFragment"
+        android:label="Transaction"
+        tools:layout="@layout/fragment_transaction" />
+    <fragment
+        android:id="@+id/recipientFragment"
+        android:name="com.rckdeveloper.jetpacknavigationcomponent.RecipientFragment"
+        android:label="Recipient"
+        tools:layout="@layout/fragment_recipient" >
+        <action
+            android:id="@+id/action_recipientFragment_to_specifyAmountFragment"
+            app:destination="@id/specifyAmountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewBalanceFragment"
+        android:name="com.rckdeveloper.jetpacknavigationcomponent.ViewBalanceFragment"
+        android:label="View Balance"
+        tools:layout="@layout/fragment_view_balance" />
+    <fragment
+        android:id="@+id/specifyAmountFragment"
+        android:name="com.rckdeveloper.jetpacknavigationcomponent.SpecifyAmountFragment"
+        android:label="Specify Amount"
+        tools:layout="@layout/fragment_specify_amount" >
+        <action
+            android:id="@+id/action_specifyAmountFragment_to_confirmationFragment"
+            app:destination="@id/confirmationFragment" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.rckdeveloper.jetpacknavigationcomponent.ConfirmationFragment"
+        android:label="Confirmation"
+        tools:layout="@layout/fragment_confirmation" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="integer" />
+    </fragment>
+</navigation>
