@@ -11,13 +11,25 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/action_mainFragment_to_transactionFragment"
-            app:destination="@id/transactionFragment" />
+            app:destination="@id/transactionFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
         <action
             android:id="@+id/action_mainFragment_to_recipientFragment"
-            app:destination="@id/recipientFragment" />
+            app:destination="@id/recipientFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
         <action
             android:id="@+id/action_mainFragment_to_viewBalanceFragment"
-            app:destination="@id/viewBalanceFragment" />
+            app:destination="@id/viewBalanceFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/transactionFragment"
@@ -31,7 +43,11 @@
         tools:layout="@layout/fragment_recipient" >
         <action
             android:id="@+id/action_recipientFragment_to_specifyAmountFragment"
-            app:destination="@id/specifyAmountFragment" />
+            app:destination="@id/specifyAmountFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
     </fragment>
     <fragment
         android:id="@+id/viewBalanceFragment"
@@ -45,7 +61,11 @@
         tools:layout="@layout/fragment_specify_amount" >
         <action
             android:id="@+id/action_specifyAmountFragment_to_confirmationFragment"
-            app:destination="@id/confirmationFragment" />
+            app:destination="@id/confirmationFragment"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"/>
         <argument
             android:name="name"
             app:argType="string" />

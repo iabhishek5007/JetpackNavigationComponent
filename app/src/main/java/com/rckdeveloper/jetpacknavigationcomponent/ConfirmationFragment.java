@@ -28,7 +28,8 @@ public class ConfirmationFragment extends Fragment {
         Name=view.findViewById(R.id.name);
 
 
-        Amount.setText(ConfirmationFragmentArgs.fromBundle(getArguments()).getAmount());
+        assert getArguments() != null;
+        Amount.setText(String.valueOf(ConfirmationFragmentArgs.fromBundle(getArguments()).getAmount()));
         Name.setText(ConfirmationFragmentArgs.fromBundle(getArguments()).getName());
 
         return view;
